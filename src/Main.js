@@ -1,16 +1,16 @@
-import './Main.css';
+import React from "react";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
+import About from "./About";
+import Home from "./Home";
 
 function Main() {
   return (
-    <div className='main'>
-      <h2>제목 자리입니다.</h2>
-
-      <div className='serch-box'>
-        <div className='serch' >       
-          <input type="text" placeholder='관련 정보를 입력하는 공간임'></input>
-        </div>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
